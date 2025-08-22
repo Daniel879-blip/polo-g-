@@ -84,7 +84,13 @@ mark {
 
 st.markdown('<h1 class="rapstar-title">🎶 RapStar Lyrics Studio</h1>', unsafe_allow_html=True)
 st.caption("Paste or upload lyrics/text. Play the **typewriter** animation, highlight words, and export. (No copyrighted text included by default.)")
-
+# ---------------------- Audio Player ----------------------
+st.subheader("🎧 Play RapStar Audio")
+try:
+    with open("rapstar.mp3", "rb") as f:
+        st.audio(f.read(), format="audio/mp3")
+except FileNotFoundError:
+    st.info("Upload your rapstar.mp3 file into the app folder to play it here.")
 # ---------------------- Session State ----------------------
 def init_state():
     defaults = {
