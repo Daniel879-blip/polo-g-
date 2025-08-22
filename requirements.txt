@@ -1,3 +1,1 @@
-# requirements.txt
-# Tkinter is included with Python by default.
-# No external dependencies are required for this app.
+streamlit
