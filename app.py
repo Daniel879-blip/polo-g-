@@ -4,7 +4,32 @@ import streamlit as st
 
 # ---------------------- Page & Styles ----------------------
 st.set_page_config(page_title="RapStar Lyrics Studio", page_icon="🎵", layout="centered")
+# === Rapstar Audio + Lyrics Block ===
+audio_file = open("rapstar.mp3", "rb")
+st.audio(audio_file, format="audio/mp3")
 
+st.markdown(
+    """
+    <marquee behavior="scroll" direction="up" scrollamount="2" style="height:300px; font-size:18px; color:white; background-color:black; padding:10px; border-radius:8px;">
+    (Shout out my nigga, Synco)<br><br>
+
+    Uh (Tuned up), copped a BMW, new deposit, I picked up another bag<br><br>
+    Like fuck it, I'ma count while I'm in it<br><br>
+    I hear planes flyin', crowds screamin', money counters, chains clangin'<br><br>
+    Shit, I guess that's how it sound when you winnin'<br><br>
+    I ain't jokin', do it sound like I'm kiddin'?<br><br>
+    I been makin' like two thousand a minute<br><br>
+    So high up through the clouds, I was swimmin'<br><br>
+    I'm probably gon' drown when I'm in it<br><br>
+    I bet she gon' get loud when I'm in it<br><br>
+    And we might have a child when I'm finished<br><br>
+
+    ...
+    </marquee>
+    """,
+    unsafe_allow_html=True
+)
+# === End Rapstar Block ===
 # Animated CSS (gradient title, floating stars, blinking cursor, fade-in lines)
 st.markdown("""
 <style>
